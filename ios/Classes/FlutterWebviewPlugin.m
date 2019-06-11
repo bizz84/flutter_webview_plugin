@@ -3,6 +3,12 @@
 
 static NSString *const CHANNEL_NAME = @"flutter_webview_plugin";
 
+// Keyboard issue
+// https://stackoverflow.com/questions/47113661/wkwebview-constrains-issue-when-keyboard-pops-up
+// https://stackoverflow.com/questions/46993890/wkwebview-layoutconstraints-issue
+// Hack to fix it: remove input accessory view. NOTE: Uses private APIs - may not pass review
+// https://stackoverflow.com/questions/32546394/hiding-keyboard-accessorybar-in-wkwebview
+
 @interface _NoInputAccessoryView : NSObject
 
 @end
